@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCreates Ltd | Innovating Solutions, Empowering Growth</title>
+    <meta name="description" content="WeCreates Ltd delivers cutting-edge software solutions to empower your business growth.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E3A8A 0%, #0F1A3D 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                <a href="#home" class="flex items-center">
+                     <img src="Assets/logo.png" alt="WeCreates Ltd Logo" class="h-20 w-auto">
+    
+                    <div class="ml-3">
+                        <span class="text-2xl font-bold text-[#1E3A8A]">WeCreates</span>
+                        <span class="text-2xl font-light text-[#1E3A8A]">Ltd</span>
+                    </div>
+                </a>
+            </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-[#1E3A8A] font-medium hover:text-[#FFD700] transition">Home</a>
+                        <a href="#about" class="text-gray-600 font-medium hover:text-[#1E3A8A] transition">About</a>
+                        <a href="#services" class="text-gray-600 font-medium hover:text-[#1E3A8A] transition">Services</a>
+                        <a href="#careers" class="text-gray-600 font-medium hover:text-[#1E3A8A] transition">Careers</a>
+                        
+                        <a href="#apply" class="bg-[#1E3A8A] text-white px-6 py-2 rounded-md hover:bg-[#FFD700] hover:text-gray-800 transition font-medium">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-[#1E3A8A] focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-[#1E3A8A]">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-[#1E3A8A]">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-[#1E3A8A]">Services</a>
+                <a href="#careers" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-[#1E3A8A]">Careers</a>
+                <a href="#careers" class="block w-full text-center bg-[#1E3A8A] text-white px-6 py-2 rounded-md hover:bg-[#FFD700] hover:text-gray-800 transition font-medium mt-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg h-screen flex items-center pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">We Create <br><br>The Future of Software</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-200">Innovating Solutions, Empowering Growth</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#careers" class="bg-[#FFD700] text-gray-900 px-8 py-3 rounded-md hover:bg-white hover:text-[#1E3A8A] transition font-bold text-center">Get Started</a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-[#1E3A8A] transition font-bold text-center">Our Services</a>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Tech illustration" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">About WeCreates Ltd</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're a team of passionate innovators dedicated to delivering cutting-edge software solutions that drive business growth.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Our team" class="rounded-lg shadow-xl">
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-[#1E3A8A] mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-4">We Startups in 2028, WeCreates Ltd has grown from a small startup to a leading software development company serving clients worldwide. Our journey has been marked by innovation, dedication, and a relentless pursuit of excellence.</p>
+                    <p class="text-gray-600 mb-6">We believe in creating solutions that not only solve today's problems but also anticipate tomorrow's challenges. Our team of experts combines technical prowess with business acumen to deliver transformative results.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-[#FFD700] text-3xl mb-2">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1"> Awards</h4>
+                            <p class="text-gray-600 text-sm">Recognized excellence in innovation</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="text-[#FFD700] text-3xl mb-2">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1"> Projects</h4>
+                            <p class="text-gray-600 text-sm">Successful implementations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions tailored to your business needs</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 fade-in">
+                    <div class="text-[#FFD700] text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1E3A8A] mb-3">Software Development</h3>
+                    <p class="text-gray-600">Custom software solutions designed to streamline your operations and drive efficiency.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 fade-in">
+                    <div class="text-[#FFD700] text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1E3A8A] mb-3">Web & Mobile Apps</h3>
+                    <p class="text-gray-600">Engaging, user-friendly applications for all platforms that connect you with your audience.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 fade-in">
+                    <div class="text-[#FFD700] text-4xl mb-4">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1E3A8A] mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-600">Scalable cloud infrastructure to support your business growth and digital transformation.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 fade-in">
+                    <div class="text-[#FFD700] text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1E3A8A] mb-3">AI/ML Integration</h3>
+                    <p class="text-gray-600">Leverage artificial intelligence and machine learning to gain competitive advantage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 
+    // Portfolio
+    <section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">Our Portfolio</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Success stories that showcase our expertise</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1E3A8A] mb-2">Enterprise CRM System</h3>
+                            <p class="text-gray-600 mb-4">Custom CRM solution for a Fortune 500 company that increased sales productivity by 45%.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-[#FFD700]">Financial Services</span>
+                                <a href="#" class="text-[#1E3A8A] hover:text-[#FFD700] font-medium">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1E3A8A] mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">Scalable online marketplace that processed $50M in transactions in its first year.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-[#FFD700]">Retail</span>
+                                <a href="#" class="text-[#1E3A8A] hover:text-[#FFD700] font-medium">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1E3A8A] mb-2">Healthcare Analytics</h3>
+                            <p class="text-gray-600 mb-4">AI-powered platform that reduced hospital readmission rates by 30%.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-[#FFD700]">Healthcare</span>
+                                <a href="#" class="text-[#1E3A8A] hover:text-[#FFD700] font-medium">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <a href="#" class="inline-block bg-[#1E3A8A] text-white px-8 py-3 rounded-md hover:bg-[#FFD700] hover:text-gray-800 transition font-bold">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    // Why Choose Us 
+    <section class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose WeCreates</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">Our commitment to excellence sets us apart</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 fade-in">
+                    <div class="text-[#FFD700] text-5xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Security First</h3>
+                    <p class="text-gray-200">Enterprise-grade security protocols to protect your data and applications.</p>
+                </div>
+                <div class="text-center p-6 fade-in">
+                    <div class="text-[#FFD700] text-5xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovative Approach</h3>
+                    <p class="text-gray-200">Cutting-edge technologies and creative problem-solving.</p>
+                </div>
+                <div class="text-center p-6 fade-in">
+                    <div class="text-[#FFD700] text-5xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-200">Dedicated support team available round the clock.</p>
+                </div>
+                <div class="text-center p-6 fade-in">
+                    <div class="text-[#FFD700] text-5xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proven Results</h3>
+                    <p class="text-gray-200">Track record of delivering measurable business impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    // Testimonials 
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Trusted by industry leaders worldwide</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"WeCreates transformed our digital infrastructure, delivering a solution that exceeded our expectations in both performance and scalability."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">CTO, TechForward Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The team's expertise in AI integration helped us gain significant competitive advantage in our market segment."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">CEO, DataSphere</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Exceptional service from start to finish. Their mobile app increased our customer engagement by 75% in just three months."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Emma Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Director, RetailPlus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    
+
+    <!-- Insert this section before the footer in your existing HTML -->
+<section id="careers" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">Join Our Team</h2>
+            <div class="w-20 h-1 bg-[#FFD700] mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Build the future with us. Explore exciting career opportunities at WeCreates Ltd.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="fade-in">
+                <h3 class="text-2xl font-bold text-[#1E3A8A] mb-6">Why Work With Us</h3>
+                <p class="text-gray-600 mb-6">At WeCreates Ltd, we believe our people are our greatest asset. We foster an environment of innovation, collaboration, and continuous learning.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1">Continuous Learning</h4>
+                            <p class="text-gray-600">Annual training budget, conference opportunities, and mentorship programs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1">Health & Wellness</h4>
+                            <p class="text-gray-600">Comprehensive healthcare, mental health support, and fitness subsidies.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1">Work-Life Balance</h4>
+                            <p class="text-gray-600">Flexible hours, remote work options, and generous vacation policy.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A] mb-1">Growth Opportunities</h4>
+                            <p class="text-gray-600">Clear career paths and regular promotion cycles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-in">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#1E3A8A] mb-6">Current Openings</h3>
+                    
+                    <!-- Job Listing 1 -->
+                    <div class="border-b border-gray-200 pb-6 mb-6">
+                        <h4 class="text-xl font-bold text-[#1E3A8A] mb-2">Web & App Developer</h4>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-[#FFD700] bg-opacity-20 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Full-time</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Remote</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Engineering</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Frontend, Backend, Database</p>
+                        <p class="text-gray-600 mb-4">Lead development of innovative software solutions using cutting-edge technologies.</p>
+                        <a href="#apply" class="text-[#1E3A8A] font-medium hover:text-[#FFD700] transition">View Details →</a>
+                    </div>
+                    
+                    <!-- Job Listing 2 -->
+                    <div class="border-b border-gray-200 pb-6 mb-6">
+                        <h4 class="text-xl font-bold text-[#1E3A8A] mb-2">UX/UI Designer</h4>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-[#FFD700] bg-opacity-20 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Full-time</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Hybrid</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Design</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Create beautiful, intuitive interfaces for our enterprise software products.</p>
+                        <a href="#apply" class="text-[#1E3A8A] font-medium hover:text-[#FFD700] transition">View Details →</a>
+                    </div>
+                    
+                    <!-- Job Listing 3 -->
+                    <div class="pb-2">
+                        <h4 class="text-xl font-bold text-[#1E3A8A] mb-2">DevOps Engineer</h4>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-[#FFD700] bg-opacity-20 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Contract</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Remote</span>
+                            <span class="bg-[#1E3A8A] bg-opacity-10 text-[#1E3A8A] px-3 py-1 rounded-full text-sm">Operations</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Build and maintain our cloud infrastructure and CI/CD pipelines.</p>
+                        <a href="#apply" class="text-[#1E3A8A] font-medium hover:text-[#FFD700] transition">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee Testimonials 
+        <div class="mt-20 fade-in">
+            <h3 class="text-2xl font-bold text-[#1E3A8A] mb-8 text-center">Hear From Our Team</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The culture at WeCreates fosters both personal and professional growth. I've learned more here in two years than I did in five at my previous company."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Employee" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Priya Patel</h4>
+                            <p class="text-gray-500 text-sm">Senior Developer, 2 years at WeCreates</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"What I love most is the trust and autonomy we're given. Management truly values our expertise and empowers us to make decisions."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Employee" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Marcus Johnson</h4>
+                            <p class="text-gray-500 text-sm">Product Manager, 3 years at WeCreates</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-[#FFD700] text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The work-life balance is exceptional, and the projects are challenging. It's rare to find both in our industry."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Employee" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-[#1E3A8A]">Elena Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">UX Designer, 1 year at WeCreates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Application Form -->
+        <div id="apply" class="mt-20 bg-gray-50 rounded-lg shadow-md overflow-hidden fade-in">
+            <div class="grid md:grid-cols-2">
+                <div class="p-8 md:p-12 gradient-bg text-white">
+                    <h3 class="text-2xl font-bold mb-4">Apply Now</h3>
+                    <p class="mb-6">Ready to take the next step in your career? We'd love to hear from you.</p><br>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold ">Our Office</h4>
+                                <p >We Are Planning to start in<br>Malaysia</p>
+                            </div>
+                        </div><br>
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-xl mr-3 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email Us</h4>
+                                <p>wecreates.ltd@gmail.com</p>
+                            </div>
+                        </div><br>
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-xl mr-3 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Call Us</h4>
+                                <p>+91 8220543596</p>
+                            </div>
+                        </div><br>
+                        <div class="mt-8">
+                        <h4 class="font-bold text-[#FFD700] mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/we_creates.ltd?igsh=eGNxbHY3ZDgwM3V3&utm_source=qr" class="text-[#FFD700] hover:text-[#FFD700] text-2xl" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/we_creates.ltd?igsh=eGNxbHY3ZDgwM3V3&utm_source=qr" class="text-[#FFD700] hover:text-[#FFD700] text-2xl" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="p-8 md:p-12 bg-white">
+                    <form id="careers-form" class="space-y-6">
+    <!-- Name Field -->
+    <div>
+        <label for="applicant-name" class="block text-gray-700 font-medium mb-2">Full Name*</label>
+        <input type="text" id="applicant-name" name="name" required class="w-full px-4 py-3 border...">
+    </div>
+    
+    <!-- Email Field -->
+    <div>
+        <label for="applicant-email" class="block text-gray-700 font-medium mb-2">Email*</label>
+        <input type="email" id="applicant-email" name="email" required class="w-full px-4 py-3 border...">
+    </div>
+    
+    <!-- Phone Field -->
+    <div>
+        <label for="applicant-phone" class="block text-gray-700 font-medium mb-2">Phone</label>
+        <input type="tel" id="applicant-phone" name="phone" class="w-full px-4 py-3 border...">
+    </div>
+    
+    <!-- Position Dropdown -->
+    <div>
+        <label for="applicant-position" class="block text-gray-700 font-medium mb-2">Position*</label>
+        <select id="applicant-position" name="position" required class="w-full px-4 py-3 border...">
+             <option value="">Select a position</option>
+                                <option value="Senior Software Engineer">Web & App Developer</option>
+                                <option value="UX/UI Designer">UX/UI Designer</option>
+                                <option value="DevOps Engineer">DevOps Engineer</option>
+                                <option value="Other">Other</option>
+        </select>
+    </div>
+    
+    <!-- Resume Upload -->
+    <div>
+        <label for="applicant-resume" class="block text-gray-700 font-medium mb-2">Resume*</label>
+        <input type="file" id="applicant-resume" name="resume" required class="w-full px-4 py-3 border...">
+    </div>
+    
+    <!-- Cover Letter -->
+    <div>
+        <label for="applicant-message" class="block text-gray-700 font-medium mb-2">Cover Letter</label>
+        <textarea id="applicant-message" name="message" rows="4" class="w-full px-4 py-3 border..."></textarea>
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="w-full bg-[#1E3A8A] text-white px-6 py-3 rounded-md...">
+        Submit Application
+    </button>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact 
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">Get In Touch</h2>
+                    <div class="w-20 h-1 bg-[#FFD700] mb-6"></div>
+                    <p class="text-xl text-gray-600 mb-8">Ready to start your project? Contact us today for a free consultation.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#1E3A8A] mb-1">Our Office</h4>
+                                <p class="text-gray-600">We Are Planning to start in<br>Malaysia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#1E3A8A] mb-1">Phone</h4>
+                                <p class="text-gray-600">+91 8220543596</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-[#FFD700] text-2xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#1E3A8A] mb-1">Email</h4>
+                                <p class="text-gray-600">wecreates.ltd@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-[#1E3A8A] mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/we_creates.ltd?igsh=eGNxbHY3ZDgwM3V3&utm_source=qr" class="text-[#1E3A8A] hover:text-[#FFD700] text-2xl" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent" placeholder="John Doe">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent" placeholder="john@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent" placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#1E3A8A] text-white px-6 py-3 rounded-md hover:bg-[#FFD700] hover:text-gray-800 transition font-bold">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-[#1E3A8A] text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">WeCreates Ltd</h3>
+                    <p class="text-gray-300 mb-4">Innovating Solutions, Empowering Growth</p>
+                    <p class="text-gray-300">© 2025 WeCreates Ltd. All rights reserved.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-[#FFD700] transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-[#FFD700] transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-[#FFD700] transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-300 hover:text-[#FFD700] transition">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-[#FFD700] transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-[#FFD700] transition">Software Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FFD700] transition">Web & Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FFD700] transition">Cloud Solutions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FFD700] transition">AI/ML Integration</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FFD700] transition">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-[#FFD700] text-gray-800 px-4 py-2 rounded-r-md hover:bg-white transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">Privacy Policy | Terms of Service</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-[#FFD700] text-xl transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-[#FFD700] text-xl transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-[#FFD700] text-xl transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-[#FFD700] text-xl transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        
+document.getElementById('careers-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // 1. Get form elements
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // 2. Get form values
+    const formData = new FormData(form);
+    
+    // 3. Validate required fields
+    if (!formData.get('name') || !formData.get('email') || 
+        !formData.get('position') || !formData.get('resume')) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    // 4. Add additional metadata
+    formData.append('_subject', 'New Job Application - WeCreates Ltd');
+    formData.append('_replyto', formData.get('email'));
+    
+    try {
+        // 5. Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // 6. Send to FormSubmit.co
+        const response = await fetch('https://formsubmit.co/ajax/wecreates.ltd@gmail.com', {
+            method: 'POST',
+            body: formData
+        });
+        
+        // 7. Handle response
+        if (!response.ok) throw new Error('Submission failed');
+        
+        // 8. Show success
+        alert('Application submitted successfully!');
+        form.reset(); // Clear form
+        
+    } catch (error) {
+        // 9. Handle errors
+        console.error('Error:', error);
+        alert('Error submitting form. Please email us directly at wecreates.ltd@gmail.com');
+    } finally {
+        // 10. Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Application';
+    }
+});
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Fade-in animation on scroll
+        function checkFadeIn() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+
+        // Initial check
+        checkFadeIn();
+
+        // Check on scroll
+        window.addEventListener('scroll', checkFadeIn);
+    </script>
+</body>
+</html>

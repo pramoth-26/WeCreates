@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color variables */
+:root {
+    --navy-blue: #071B47;
+    --gold: #B89700;
+}
+
+/* Font family */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Glassmorphism effect */
+.backdrop-blur-lg {
+    backdrop-filter: blur(10px);
+}
+
+/* Custom color classes */
+.bg-navy-blue {
+    background-color: var(--navy-blue);
+}
+
+.text-navy-blue {
+    color: var(--navy-blue);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.border-gold {
+    border-color: var(--gold);
+}
+
+/* Hero background parallax effect */
+.hero {
+    background-attachment: fixed;
+}
+
+/* Career card details toggle */
+.job-details {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.job-details.active {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .job-details.active {
+        max-height: 300px;
+    }
+}
